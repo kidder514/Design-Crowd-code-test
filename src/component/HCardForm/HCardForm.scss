@@ -49,3 +49,20 @@
         }
     }
 }
+
+@media (max-width: $breakpoint-lg) {
+    .h-card-form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .h-card-form {
+
+        section.h-card-form-input-group-wrapper .h-card-form-input-group .h-card-form-input,
+        section.h-card-form-button-group-wrapper .h-card-form-button-group .h-card-form-button {
+            width: 100%;
+        }
+    }
+}
