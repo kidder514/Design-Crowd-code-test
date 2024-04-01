@@ -9,7 +9,7 @@ const CustomInputFile: FC<CustomInputProps> = memo(({
     label,
     className,
     theme = 'primary',
-    onChange,
+    onChange, // @ts-ignore
     ...props
 }) => {
     const inputFileRef = useRef<HTMLInputElement>(null);
@@ -37,6 +37,7 @@ const CustomInputFile: FC<CustomInputProps> = memo(({
                 ref={inputFileRef}
                 onChange={onChangeLocal}
                 accept="image/png, image/gif, image/jpeg"
+                data-testid='input-file'
             />
         </div>
     )

@@ -21,7 +21,7 @@ const HCard = ({ data }: HCardProps) => {
     const addressLine2 = `${addressFields?.suburb?.value || ''} ${addressFields?.state?.value || ''}`.trim()
 
     return (
-        <div className="h-card-view">
+        <div className="h-card-view" test-dataid='h-card-view'>
             <div className='h-card-view-container'>
                 <header className='h-card-view-header'>
                     {fullName}

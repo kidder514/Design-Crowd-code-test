@@ -29,10 +29,10 @@ const CustomInput: FC<CustomInputProps> = memo((props: CustomInputProps) => {
             {label && <label htmlFor={label}>{label}</label>}
             <input
                 type={type}
-                id={label}
                 value={value}
                 name={name}
                 onChange={onChange}
+                data-testid={label?.replace(' ', '-') || ''}
                 onClick={onClick}
             />
         </div>
