@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, HTMLInputTypeAttribute, MouseEvent } from 'react'
+import { ChangeEvent, FC, HTMLInputTypeAttribute, memo, MouseEvent } from 'react'
 import CustomInputFile from '../CustomInputFile/CustomInputFile'
 
 import './CustomInput.scss'
@@ -16,7 +16,7 @@ export interface CustomInputProps {
 
 // validator to be added
 
-const CustomInput: FC<CustomInputProps> = (props: CustomInputProps) => {
+const CustomInput: FC<CustomInputProps> = memo((props: CustomInputProps) => {
     const { type, label, value, name, className, theme = 'primary', onChange, onClick } = props;
 
     if (type === 'file') {
@@ -37,6 +37,13 @@ const CustomInput: FC<CustomInputProps> = (props: CustomInputProps) => {
             />
         </div>
     )
-}
+}, (oldProps: CustomInputProps, newProps: CustomInputProps) => {
+    return oldProps.label === newProps.label &&
+        oldProps.type === newProps.type &&
+        oldProps.value === newProps.value &&
+        oldProps.name === newProps.name &&
+        oldProps.className === newProps.className &&
+        oldProps.theme === newProps.theme
+})
 
 export default CustomInput

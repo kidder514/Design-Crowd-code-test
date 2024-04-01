@@ -1,11 +1,11 @@
-import { ChangeEvent, FC, useRef } from 'react'
+import { ChangeEvent, FC, memo, useRef } from 'react'
 import { CustomInputProps } from '../CustomInput/CustomInput';
 
 import './CustomInputFile.scss'
 
 // validator to be added
 
-const CustomInputFile: FC<CustomInputProps> = ({
+const CustomInputFile: FC<CustomInputProps> = memo(({
     label,
     className,
     theme = 'primary',
@@ -40,6 +40,10 @@ const CustomInputFile: FC<CustomInputProps> = ({
             />
         </div>
     )
-}
+}, (oldProps: CustomInputProps, newProps: CustomInputProps) => {
+    return oldProps.label === newProps.label &&
+        oldProps.className === newProps.className &&
+        oldProps.theme === newProps.theme
+})
 
 export default CustomInputFile
