@@ -1,0 +1,36 @@
+@import '../../style/variable.scss';
+
+.h-card-form {
+    width: 60%;
+    padding: 2rem;
+
+    .h-card-form-title {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    section.h-card-form-section {
+        h3.h-card-form-section-header {
+            color: $grey;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin: 0.25rem 0 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid $grey;
+        }
+
+        .h-card-form-input-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+
+
+            .h-card-form-input {
+                width: 50%;
+                padding-right: 2%;
+                box-sizing: border-box;
+            }
+        }
+
+    }
+}

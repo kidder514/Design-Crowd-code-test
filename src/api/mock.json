@@ -1,0 +1,64 @@
+{
+    "personalDetails": {
+        "label": "PERSONAL DETAILS",
+        "type": "section",
+        "fields": {
+            "givenName": {
+                "label": "GIVEN NAME",
+                "type": "text",
+                "value": "Sam"
+            },
+            "surname": {
+                "label": "SURNAME",
+                "type": "text",
+                "value": "Smith"
+            },
+            "email": {
+                "label": "EMAIL",
+                "type": "email",
+                "value": "sam.smith@designcrowd.com"
+            },
+            "phone": {
+                "label": "PHONE",
+                "type": "text",
+                "value": "02 1234 5678"
+            }
+        }
+    },
+    "address": {
+        "label": "ADDRESS",
+        "type": "section",
+        "fields": {
+            "houseNameNumber": {
+                "label": "HOUSE NAME OR #",
+                "type": "text",
+                "value": "2"
+            },
+            "street": {
+                "label": "STREET",
+                "type": "text",
+                "value": "Hill St"
+            },
+            "suburb": {
+                "label": "SUBURB",
+                "type": "text",
+                "value": "Surry Hills"
+            },
+            "state": {
+                "label": "STATE",
+                "type": "text",
+                "value": "NSW"
+            },
+            "postcode": {
+                "label": "POSTCODE",
+                "type": "number",
+                "value": "2010"
+            },
+            "country": {
+                "label": "COUNTRY",
+                "type": "text",
+                "value": "Australia"
+            }
+        }
+    }
+}

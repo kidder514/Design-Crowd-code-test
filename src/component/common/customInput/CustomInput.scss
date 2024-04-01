@@ -1,0 +1,17 @@
+.custom-input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 0.75rem;
+        padding: 0.5rem 0
+    }
+
+    input {
+        border: 1px solid #abb4b9;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+}
