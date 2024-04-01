@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getHCardData } from "../api/data";
 import { HCardDataResponse } from "../types";
 import HCardForm from "../component/HCardForm/HCardForm";
-import HCard from "../component/HCard/HCard";
+import HCard from "remote/HCard";
 
 import './HCardPage.scss'
 
