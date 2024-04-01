@@ -1,3 +1,5 @@
+@import '../../../style/variable.scss';
+
 .custom-input-wrapper {
     display: flex;
     flex-direction: column;
@@ -13,5 +15,24 @@
         font-size: 1rem;
         margin-bottom: 0.5rem;
         padding: 0.5rem;
+
+        &[type="button"] {
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    &.primary {
+        input[type="button"] {
+            background-color: $button-primary;
+
+            &:hover {
+                background-color: $button-primary-hover;
+            }
+        }
+    }
+
+    &.secondary {
+        // add secondary theme css
     }
 }

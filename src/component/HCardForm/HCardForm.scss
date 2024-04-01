@@ -3,14 +3,17 @@
 .h-card-form {
     width: 60%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .h-card-form-title {
         font-size: 1.5rem;
         padding-bottom: 1.5rem;
     }
 
-    section.h-card-form-section {
-        h3.h-card-form-section-header {
+    section.h-card-form-input-group-wrapper {
+        h3.h-card-form-input-group-header {
             color: $grey;
             font-size: 0.75rem;
             font-weight: 700;
@@ -31,6 +34,18 @@
                 box-sizing: border-box;
             }
         }
+    }
 
+    section.h-card-form-button-group-wrapper {
+        .h-card-form-button-group {
+            display: flex;
+            flex-wrap: wrap;
+
+            .h-card-form-button {
+                width: 50%;
+                padding-right: 2%;
+                box-sizing: border-box;
+            }
+        }
     }
 }

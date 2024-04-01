@@ -10,12 +10,17 @@ export type Fields = {
     [key: string]: Field
 }
 
-export type Section = {
+
+export enum GROUP_TYPE {
+    INPUT = 'input',
+    ACTION = 'action'
+}
+export type Group = {
     label: string,
-    type: 'section',
+    type: GROUP_TYPE,
     fields: Fields
 }
 
 export interface HCardDataResponse {
-    [key: string]: Section
+    [key: string]: Group
 }

@@ -22,6 +22,18 @@
             align-items: center;
             padding: 3rem 2rem 1.5rem;
             font-size: 1.5rem;
+            height: 6rem;
+            box-sizing: border-box;
+            position: relative;
+
+            .h-card-view-avatar {
+                width: 6rem;
+                height: 6rem;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+
+            }
         }
 
         div.h-card-view-body {

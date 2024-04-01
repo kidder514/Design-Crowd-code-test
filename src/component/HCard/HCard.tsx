@@ -11,8 +11,10 @@ const HCard = ({ data }: HCardProps) => {
 
     const personalDetailFields = data?.personalDetails?.fields;
     const addressFields = data?.address?.fields;
+    const actionFields = data?.action?.fields;
 
     const fullName = `${personalDetailFields?.givenName?.value || ''} ${personalDetailFields?.surname?.value || ''}`.trim()
+    const avatar = actionFields?.uploadAvatar?.value as string || '';
     const email = personalDetailFields?.email?.value || '';
     const phone = personalDetailFields?.phone?.value || '';
     const addressLine1 = `${addressFields?.houseNameNumber?.value || ''} ${addressFields?.street?.value || ''}`.trim()
@@ -23,6 +25,7 @@ const HCard = ({ data }: HCardProps) => {
             <div className='h-card-view-container'>
                 <header className='h-card-view-header'>
                     {fullName}
+                    <img className='h-card-view-avatar' src={avatar} alt="avatar" />
                 </header>
                 <div className='h-card-view-body'>
                     <table>

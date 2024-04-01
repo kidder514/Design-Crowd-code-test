@@ -1,35 +1,39 @@
-import { ChangeEvent, FC, HTMLInputTypeAttribute } from 'react'
+import { ChangeEvent, FC, HTMLInputTypeAttribute, MouseEvent } from 'react'
+import CustomInputFile from '../CustomInputFile/CustomInputFile'
 
 import './CustomInput.scss'
 
-interface CustomInputProps {
-    label: string
+export interface CustomInputProps {
+    label?: string
     type: HTMLInputTypeAttribute
-    value: string | number
-    name: string
+    value?: string | number
+    name?: string
     className?: string
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void
+    theme?: 'primary' | 'secondary'
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+    onClick?: (e: MouseEvent<HTMLInputElement>) => void
 }
 
 // validator to be added
 
-const CustomInput: FC<CustomInputProps> = ({
-    type,
-    label,
-    value,
-    name,
-    className,
-    onChange,
-}) => {
+const CustomInput: FC<CustomInputProps> = (props: CustomInputProps) => {
+    const { type, label, value, name, className, theme = 'primary', onChange, onClick } = props;
+
+    if (type === 'file') {
+        // move input[type=file] to another component to reduce the complexity
+        return <CustomInputFile {...props} />
+    }
+
     return (
-        <div className={`custom-input-wrapper ${className}`}>
-            <label htmlFor={label}>{label}</label>
+        <div className={`custom-input-wrapper ${className} ${theme}`}>
+            {label && <label htmlFor={label}>{label}</label>}
             <input
                 type={type}
                 id={label}
                 value={value}
                 name={name}
                 onChange={onChange}
+                onClick={onClick}
             />
         </div>
     )

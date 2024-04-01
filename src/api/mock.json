@@ -1,7 +1,7 @@
 {
     "personalDetails": {
         "label": "PERSONAL DETAILS",
-        "type": "section",
+        "type": "input",
         "fields": {
             "givenName": {
                 "label": "GIVEN NAME",
@@ -27,7 +27,7 @@
     },
     "address": {
         "label": "ADDRESS",
-        "type": "section",
+        "type": "input",
         "fields": {
             "houseNameNumber": {
                 "label": "HOUSE NAME OR #",
@@ -58,6 +58,22 @@
                 "label": "COUNTRY",
                 "type": "text",
                 "value": "Australia"
+            }
+        }
+    },
+    "action": {
+        "label": "Action",
+        "type": "action",
+        "fields": {
+            "uploadAvatar": {
+                "label": "Upload Avatar",
+                "type": "file",
+                "value": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
+            },
+            "createHCArd": {
+                "label": "Create hCard",
+                "type": "button",
+                "value": ""
             }
         }
     }
