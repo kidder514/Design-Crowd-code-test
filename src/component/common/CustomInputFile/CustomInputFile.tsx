@@ -21,8 +21,6 @@ const CustomInputFile: FC<CustomInputProps> = ({
 
     const onChangeLocal = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && onChange) {
-            console.log(e.target.files[0])
-            console.log(URL.createObjectURL(e.target.files[0]))
             onChange({ target: { value: URL.createObjectURL(e.target.files[0]) } } as ChangeEvent<HTMLInputElement>);
         }
     };

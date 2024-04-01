@@ -20,7 +20,7 @@ const CustomInput: FC<CustomInputProps> = (props: CustomInputProps) => {
     const { type, label, value, name, className, theme = 'primary', onChange, onClick } = props;
 
     if (type === 'file') {
-        // move input[type=file] to another component to reduce the complexity
+        // move input[type=file] to another component to reduce the component complexity
         return <CustomInputFile {...props} />
     }
 
